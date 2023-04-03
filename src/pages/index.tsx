@@ -1,15 +1,21 @@
-import Ape1 from "public/18002.png";
-import Ape2 from "public/2335.png";
-import ConnectWallet from "@/components/ConnectWallet/ConnectWallet";
-import Image from "next/image";
-import { Inter } from "next/font/google";
+import { Heading, Text } from "@/components/ui/text";
 
-const inter = Inter({ subsets: ["latin"] });
+import BAYC2335 from "public/BAYC2335.png";
+import BAYC7900 from "public/BAYC7900.png";
+import Image from "next/image";
+import Link from "next/link";
+import MAYC18002 from "public/MAYC18002.png";
+import MAYC2387 from "public/MAYC2387.png";
+import MAYC23877 from "public/MAYC23877.png";
+import { Navbar } from "@/components/Navbar";
+import { buttonVariants } from "@/components/ui/button";
+import { locales } from "@/locales";
+import { routes } from "@/config";
 
 export default function Home() {
   return (
     <div className="bg-white">
-      <header className="absolute inset-x-0 top-0 z-50"></header>
+      <Navbar />
       <main>
         <div className="relative isolate">
           <svg
@@ -57,25 +63,29 @@ export default function Home() {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                    ENS Avatar doesn't work for public social media
-                  </h1>
-                  <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                    Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in
-                    quis cupidatat mollit aute velit. Et labore commodo nulla
-                    aliqua proident mollit ullamco exercitation tempor. Sint
-                    aliqua anim nulla sunt mollit id pariatur in voluptate
-                    cillum.
-                  </p>
+                  <Heading className="font-extrabold tracking-tight lg:text-6xl">
+                    {locales.heroTitle}
+                  </Heading>
+                  <Text variant="lead" className="mt-6 leading-8 relative">
+                    {locales.heroDescription}
+                  </Text>
+
                   <div className="mt-10 flex items-center gap-x-6">
-                    <ConnectWallet />
+                    <Link
+                      href={routes.PROFILE}
+                      className={buttonVariants({
+                        size: "lg",
+                      })}
+                    >
+                      {locales.cta}
+                    </Link>
                   </div>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
                   <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                     <div className="relative">
                       <Image
-                        src={Ape1}
+                        src={MAYC18002}
                         alt=""
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
@@ -85,7 +95,7 @@ export default function Home() {
                   <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                     <div className="relative">
                       <Image
-                        src={Ape2}
+                        src={BAYC7900}
                         alt=""
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
@@ -93,7 +103,7 @@ export default function Home() {
                     </div>
                     <div className="relative">
                       <Image
-                        src={Ape2}
+                        src={MAYC2387}
                         alt=""
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
@@ -103,7 +113,7 @@ export default function Home() {
                   <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                     <div className="relative">
                       <Image
-                        src={Ape1}
+                        src={MAYC23877}
                         alt=""
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
@@ -111,7 +121,7 @@ export default function Home() {
                     </div>
                     <div className="relative">
                       <Image
-                        src={Ape1}
+                        src={BAYC2335}
                         alt=""
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
