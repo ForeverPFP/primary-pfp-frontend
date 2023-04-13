@@ -24,15 +24,15 @@ export const PickerList: React.FC<PickerListProps> = ({
 
   if (nfts.length === 0)
     return (
-      <div className="h-72 w-full mb-10 flex items-center justify-center flex-col">
-        <FrownIcon className="text-gray-400 h-12 w-12 mb-6" />
-        <p className="text-gray-400 text-lg font-bold">{locales.noNftsFound}</p>
+      <div className="mb-10 flex h-72 w-full flex-col items-center justify-center">
+        <FrownIcon className="mb-6 h-12 w-12 text-gray-400" />
+        <p className="text-lg font-bold text-gray-400">{locales.noNftsFound}</p>
       </div>
     );
 
   return (
-    <ScrollArea className="h-72 w-full mb-10">
-      <div className="grid grid-cols-4 sm:grid-cols-5 gap-6 p-1">
+    <ScrollArea className="mb-10 h-72 w-full">
+      <div className="grid grid-cols-4 gap-6 p-1 sm:grid-cols-5">
         {nfts.map((nft) => {
           const isAlreadyBound =
             nft.contract.address.toUpperCase() ===
@@ -52,7 +52,7 @@ export const PickerList: React.FC<PickerListProps> = ({
               className={cn(
                 selected?.contract === nft.contract.address &&
                   selected?.tokenId === +nft.tokenId &&
-                  "ring-2 ring-theme-500 shadow-lg "
+                  "shadow-lg ring-2 ring-theme-500 "
               )}
             >
               <AvatarImage

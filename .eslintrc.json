@@ -3,7 +3,7 @@
   "plugins": ["tailwindcss"],
   "settings": {
     "tailwindcss": {
-      "callees": "cn"
+      "callees": ["cn"]
     }
   }
 }

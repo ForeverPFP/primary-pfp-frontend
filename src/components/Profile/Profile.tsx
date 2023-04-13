@@ -20,14 +20,14 @@ export const Profile: React.FC = () => {
   return (
     <>
       <Card>
-        <CardTitle className="text-center mb-8">Your profile</CardTitle>
+        <CardTitle className="mb-8 text-center">Your profile</CardTitle>
         <Avatar className="mx-auto h-40 w-40">
           <AvatarImage src={metadata?.media[0].thumbnail} />
           <AvatarFallback>
-            <User className="w-8 h-8" />
+            <User className="h-8 w-8" />
           </AvatarFallback>
         </Avatar>
-        <Text variant={"large"} className="tracking-tight text-center my-6">
+        <Text variant={"large"} className="my-6 text-center tracking-tight">
           {ensName ?? formattedAdr}
         </Text>
         {pfpBinded ? (
@@ -36,7 +36,7 @@ export const Profile: React.FC = () => {
           // <h2 className="text-center py-2 text-red-500 text-md leading-6">
           <Text
             variant={"large"}
-            className="tracking-tight text-center my-6 text-red-500"
+            className="my-6 text-center tracking-tight text-red-500"
           >
             {locales.noPfpBinded}
           </Text>

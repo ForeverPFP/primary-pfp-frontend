@@ -5,7 +5,7 @@ import {
   useWaitForTransaction,
 } from "wagmi";
 
-import FOREVER_PFP_ABI from "@/abi/foreverPFP.json";
+import FOREVER_PFP_ABI from "@/abi/forever-pfp-abi.json";
 import { useGetPFP } from "./useGetPFP";
 
 export const useUnbind = () => {

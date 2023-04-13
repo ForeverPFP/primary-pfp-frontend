@@ -73,6 +73,6 @@ const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
     );
   }
 );
-Heading.displayName = "Heading";
+Text.displayName = "Text";
 
 export { Heading, Text, textVariants };

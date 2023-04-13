@@ -18,9 +18,9 @@ function App() {
       <Navbar />
       <main
         className={cn(
-          "pt-32 px-2 space-y-4  max-w-xl mx-auto text-center",
+          "mx-auto max-w-xl space-y-4  px-2 pt-32 text-center",
           isConnected &&
-            "lg:max-w-4xl lg:space-y-0 lg:grid grid-cols-3 gap-4 text-left mb-12"
+            "mb-12 grid-cols-3 gap-4 text-left lg:grid lg:max-w-4xl lg:space-y-0"
         )}
       >
         {!isConnected ? (

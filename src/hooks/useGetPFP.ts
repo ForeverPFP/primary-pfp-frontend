@@ -1,7 +1,7 @@
 import { useContractRead, useNetwork } from "wagmi";
 
 import { BigNumber } from "ethers";
-import FOREVER_PFP_ABI from "@/abi/foreverPFP.json";
+import FOREVER_PFP_ABI from "@/abi/forever-pfp-abi.json";
 import { env } from "@/config";
 import { useUser } from "./useUser";
 

@@ -1,6 +1,6 @@
 import { useContractRead, useNetwork } from "wagmi";
 
-import FOREVER_PFP_ABI from "@/abi/foreverPFP.json";
+import FOREVER_PFP_ABI from "@/abi/forever-pfp-abi.json";
 import { env } from "@/config";
 
 export const useIsVerified = (nftContract: string) => {

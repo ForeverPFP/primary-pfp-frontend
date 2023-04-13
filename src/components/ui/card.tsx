@@ -6,7 +6,7 @@ const Card: React.FC<{ children: React.ReactNode; className?: string }> = ({
   children,
   className,
 }) => (
-  <div className={cn("bg-white w-full p-6 rounded-xl shadow-md", className)}>
+  <div className={cn("w-full rounded-xl bg-white p-6 shadow-md", className)}>
     {children}
   </div>
 );

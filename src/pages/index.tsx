@@ -66,7 +66,7 @@ export default function Home() {
                   <Heading className="font-extrabold tracking-tight lg:text-6xl">
                     {locales.heroTitle}
                   </Heading>
-                  <Text variant="lead" className="mt-6 leading-8 relative">
+                  <Text variant="lead" className="relative mt-6 leading-8">
                     {locales.heroDescription}
                   </Text>
 

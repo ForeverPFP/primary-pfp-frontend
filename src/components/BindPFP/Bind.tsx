@@ -1,8 +1,6 @@
-import { Button, buttonVariants } from "../ui/button";
-
+import { Button } from "../ui/button";
 import { Error } from "../ui/Error";
 import { ExploreLink } from "../ExplorerLink";
-import { ExternalLink } from "lucide-react";
 import { Infos } from "../ui/Infos";
 import { NftData } from "./BindPFP";
 import React from "react";
@@ -29,7 +27,7 @@ export const Bind: React.FC<BindProps> = ({ selectedNft }) => {
   } = useBind(selectedNft?.contract, selectedNft?.tokenId);
 
   return (
-    <div className="space-y-4">
+    <div className="">
       <Button
         className="w-full"
         disabled={selectedNft === null}
