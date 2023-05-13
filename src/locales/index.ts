@@ -1,10 +1,12 @@
 export const locales = {
   name: "Forever PFP",
   metaTile: "Connecting web3 people - Forever PFP",
-  heroTitle: "Connecting web3 people",
-  heroDescription:
-    "ForeverPFP makes it easier for you to build meaningful connections in the Web3 space. By merging ENS and on-chain PFPs, we help you create a distinct, verifiable identity.",
-  cta: "Connecting web3 people - Bind your PFF today!",
+  heroTitle: "Connect to your PFP community onchain in 5 steps:",
+  stepOne: "1. Register an ENS",
+  stepTwo: "2. Set the ENS primary for your address",
+  stepThree: "3. Set your primary PFP to your primary ENS address",
+  stepFour: "4. Find your community members on twitter",
+  stepFive: "5. Set your twitter record for your primary ENS to be connected",
   connectWallet: "Connect Wallet",
   wrongNetwork: "Please connect to the correct network",
   noPfpBinded: "Currently you have no PFP binded",

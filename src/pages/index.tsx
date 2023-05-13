@@ -63,12 +63,33 @@ export default function Home() {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <Heading className="font-extrabold tracking-tight lg:text-6xl">
+                  <Heading className="font-extrabold tracking-tight lg:text-4xl">
                     {locales.heroTitle}
                   </Heading>
-                  <Text variant="lead" className="relative mt-6 leading-8">
-                    {locales.heroDescription}
-                  </Text>
+
+                  <div className="mt-10 flex items-center gap-x-6">
+                    <Link
+                      href={"https://support.ens.domains/howto/registration"}
+                      className={buttonVariants({
+                        size: "lg",
+                      })}
+                    >
+                      {locales.stepOne}
+                    </Link>
+                  </div>
+
+                  <div className="mt-10 flex items-center gap-x-6">
+                    <Link
+                      href={
+                        "https://support.ens.domains/howto/set-primary-name"
+                      }
+                      className={buttonVariants({
+                        size: "lg",
+                      })}
+                    >
+                      {locales.stepTwo}
+                    </Link>
+                  </div>
 
                   <div className="mt-10 flex items-center gap-x-6">
                     <Link
@@ -77,7 +98,29 @@ export default function Home() {
                         size: "lg",
                       })}
                     >
-                      {locales.cta}
+                      {locales.stepThree}
+                    </Link>
+                  </div>
+
+                  <div className="mt-10 flex items-center gap-x-6">
+                    <Link
+                      href={"https://support.ens.domains/howto/set-record"}
+                      className={buttonVariants({
+                        size: "lg",
+                      })}
+                    >
+                      {locales.stepFour}
+                    </Link>
+                  </div>
+
+                  <div className="mt-10 flex items-center gap-x-6">
+                    <Link
+                      href={routes.PROFILE}
+                      className={buttonVariants({
+                        size: "lg",
+                      })}
+                    >
+                      {locales.stepFive}
                     </Link>
                   </div>
                 </div>
