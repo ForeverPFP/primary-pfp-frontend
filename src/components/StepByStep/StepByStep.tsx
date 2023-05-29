@@ -15,15 +15,12 @@ import { SetPrimaryPFP } from "../SetPrimaryPFPSmall";
 import { Step } from "./Step";
 import { locales } from "@/locales";
 import { useGetPrimary } from "@/hooks/useGetPrimary";
-import { useGetTwitterAccount } from "@/hooks/useGetTwitterAccount";
 import { useUser } from "@/hooks/useUser";
 import { withHydratationFix } from "@/hoc/withHydratationFix";
 
 export const StepByStep = withHydratationFix((): React.ReactElement | null => {
   const { ensName, isLoadingEnsName } = useUser();
   const { pfpSet, isLoading: isLoadingPrimaryPFP } = useGetPrimary();
-  const { twitter, isLoading: isLoadingTwitter } =
-    useGetTwitterAccount(ensName);
   const [isDelegateCash, setIsDelegateCash] = React.useState(false);
 
   return (
@@ -101,28 +98,9 @@ export const StepByStep = withHydratationFix((): React.ReactElement | null => {
           <SetPrimaryPFP useDelegateCash={isDelegateCash} />
         </Step>
 
-        <Step
-          step={4}
-          title={locales.steps[4].title}
-          isOk={!!twitter}
-          isLoading={isLoadingTwitter}
-        >
+        <Step step={4} title={locales.steps[4].title}>
           <CardDescription className="pb-4">
             {locales.steps[4].description}
-            <br />
-            {twitter ? (
-              <span>
-                {locales.currentTwitterUsername}{" "}
-                <span className="font-bold text-primary">{twitter}</span>
-              </span>
-            ) : null}
-          </CardDescription>
-          <EnsTwitterRecord />
-        </Step>
-
-        <Step step={5} title={locales.steps[5].title}>
-          <CardDescription className="pb-4">
-            {locales.steps[5].description}
             <Link
               href={"https://twitter.com/"}
               className="ml-1 mt-3 flex items-center text-sm font-bold text-primary underline underline-offset-4"
@@ -130,7 +108,7 @@ export const StepByStep = withHydratationFix((): React.ReactElement | null => {
               rel="noopener noreferrer"
             >
               <ExternalLink size={16} className="mr-1" />
-              {locales.steps[5].cta}
+              {locales.steps[4].cta}
             </Link>
           </CardDescription>
         </Step>

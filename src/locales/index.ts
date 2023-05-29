@@ -3,7 +3,7 @@ export const locales = {
   metaTile: "Connecting web3 people - Primary PFP",
   heroTitle: "Connecting web3 people",
   heroDescription:
-    "Primary PFP makes it easier for you to build meaningful connections in the Web3 space. By merging ENS and on-chain PFPs, we help you create a distinct, verifiable identity.",
+    "Primary PFP makes it easier for you to find your PFP community members by real. By merging primary ENS and primary PFP in one address, we help you create a unique identity onchain.",
   connectWallet: "Connect Wallet",
   wrongNetwork: "Please connect to the correct network",
   disconnect: "Disconnect",
@@ -30,9 +30,7 @@ export const locales = {
   tokenID: "Token ID",
   mint: "Mint",
   connectWalletFirst: "Please connect your wallet first",
-  twitterUsername: "twitter username",
-  currentTwitterUsername: "Your current twitter username is",
-  stepsTitle: "Connect to your PFP community onchain in five steps",
+  stepsTitle: "Connect to your PFP community onchain in 4 steps",
   stepsDescription:
     "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
   steps: {
@@ -53,13 +51,7 @@ export const locales = {
       cta: "Connect Wallet",
     },
     4: {
-      title: "Set your twitter record",
-      description:
-        "Set your twitter record for your primary ENS to be connected.",
-      cta: "Set your twitter username",
-    },
-    5: {
-      title: "Find your community members on twitter",
+      title: "Find your community members",
       description:
         "Find others members of your community on twitter and connect with them.",
       cta: "Find Community",
